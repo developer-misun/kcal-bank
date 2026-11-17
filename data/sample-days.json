@@ -1,0 +1,1022 @@
+{
+ "_note": "실제 사용 기록에서 체중 등 건강 정보를 뺀 예시 식단 데이터. 2026-10-29 이후 항목에만 영양소가 있음. 대부분 추정값.",
+ "days": [
+  {
+   "date": "2026-10-20",
+   "items": [
+    {
+     "kcal": 110,
+     "meal": "간식",
+     "name": "과자"
+    },
+    {
+     "kcal": 170,
+     "meal": "간식",
+     "name": "음료수"
+    },
+    {
+     "kcal": 150,
+     "meal": "간식",
+     "name": "삶은 달걀 2개"
+    },
+    {
+     "kcal": 120,
+     "meal": "저녁",
+     "name": "사과 1개"
+    },
+    {
+     "kcal": 125,
+     "meal": "저녁",
+     "name": "생두부 반 모"
+    },
+    {
+     "kcal": 95,
+     "meal": "저녁",
+     "name": "막걸리 200ml"
+    },
+    {
+     "kcal": 25,
+     "meal": "저녁",
+     "name": "김치"
+    },
+    {
+     "kcal": 120,
+     "meal": "저녁",
+     "name": "들기름 1큰술"
+    },
+    {
+     "kcal": 220,
+     "meal": "저녁",
+     "name": "한입 김치전 4조각 (에어프라이어)"
+    }
+   ],
+   "active": 106
+  },
+  {
+   "date": "2026-10-21",
+   "items": [
+    {
+     "kcal": 64,
+     "meal": "아침",
+     "name": "자몽허니블랙티"
+    },
+    {
+     "kcal": 5,
+     "meal": "아침",
+     "name": "블랙커피 1잔"
+    },
+    {
+     "kcal": 390,
+     "meal": "점심",
+     "name": "와퍼주니어"
+    },
+    {
+     "kcal": 150,
+     "meal": "간식",
+     "name": "삶은 달걀 2개"
+    },
+    {
+     "kcal": 210,
+     "meal": "간식",
+     "name": "바나나맛우유"
+    },
+    {
+     "kcal": 210,
+     "meal": "저녁",
+     "name": "참치 85g 캔 (기름 포함)"
+    },
+    {
+     "kcal": 20,
+     "meal": "저녁",
+     "name": "당근 채 무침"
+    },
+    {
+     "kcal": 55,
+     "meal": "저녁",
+     "name": "홀토마토 소스 200ml (양파 포함)"
+    },
+    {
+     "kcal": 275,
+     "meal": "저녁",
+     "name": "삶은 파스타 (넉넉히, 약 175g)"
+    }
+   ],
+   "active": null
+  },
+  {
+   "date": "2026-10-22",
+   "items": [
+    {
+     "kcal": 60,
+     "meal": "아침",
+     "name": "사과 반쪽"
+    },
+    {
+     "kcal": 60,
+     "meal": "아침",
+     "name": "한삼근 진한 홍삼 쌍화차 1포(15g)"
+    },
+    {
+     "kcal": 380,
+     "meal": "점심",
+     "name": "엄코스 요리 (춘권샐러드·유린기·칠리새우·탕수육 1개씩, 유산슬 3숨갈)"
+    },
+    {
+     "kcal": 180,
+     "meal": "점심",
+     "name": "짬뽕 조금 (면 세 젓가락)"
+    },
+    {
+     "kcal": 160,
+     "meal": "간식",
+     "name": "분다버그 핑크자몽 375ml"
+    },
+    {
+     "kcal": 65,
+     "meal": "간식",
+     "name": "흰 우유 반 잔(약 100ml)"
+    },
+    {
+     "kcal": 208,
+     "meal": "저녁",
+     "name": "멀티 그레인 치킨 샐러드(270g)"
+    },
+    {
+     "kcal": 110,
+     "meal": "저녁",
+     "name": "한입 김치전 2조각 (에어프라이어)"
+    }
+   ],
+   "active": null
+  },
+  {
+   "date": "2026-10-23",
+   "items": [
+    {
+     "kcal": 60,
+     "meal": "아침",
+     "name": "사과 반쪽"
+    },
+    {
+     "kcal": 95,
+     "meal": "아침",
+     "name": "땅콩버터(무첨가) 1큰술(약 16g)"
+    },
+    {
+     "kcal": 80,
+     "meal": "아침",
+     "name": "저지방우유 200ml"
+    },
+    {
+     "kcal": 5,
+     "meal": "아침",
+     "name": "G7 블랙커피 2g"
+    },
+    {
+     "kcal": 150,
+     "meal": "점심",
+     "name": "삶은 달걀 2개"
+    },
+    {
+     "kcal": 40,
+     "meal": "간식",
+     "name": "귤 1개"
+    },
+    {
+     "kcal": 165,
+     "meal": "저녁",
+     "name": "새우까스 3개"
+    },
+    {
+     "kcal": 140,
+     "meal": "저녁",
+     "name": "등심까스 2조각"
+    },
+    {
+     "kcal": 180,
+     "meal": "저녁",
+     "name": "치즈까스 2조각"
+    },
+    {
+     "kcal": 75,
+     "meal": "저녁",
+     "name": "공깃밥 1/4"
+    },
+    {
+     "kcal": 60,
+     "meal": "저녁",
+     "name": "돈까스 소스·양배추 샐러드 (추정)"
+    },
+    {
+     "kcal": 64,
+     "meal": "간식",
+     "name": "프랭클린 엘더플라워 레모네이드 275ml"
+    }
+   ],
+   "active": null
+  },
+  {
+   "date": "2026-10-24",
+   "items": [
+    {
+     "kcal": 120,
+     "meal": "아침",
+     "name": "사과 1개"
+    },
+    {
+     "kcal": 95,
+     "meal": "아침",
+     "name": "땅콩버터(무첨가) 1큰술(약 16g)"
+    },
+    {
+     "kcal": 180,
+     "meal": "점심",
+     "name": "삶은 스파게티 200ml 용기 1개"
+    },
+    {
+     "kcal": 532,
+     "meal": "점심",
+     "name": "캔햄 1캔(200g)"
+    },
+    {
+     "kcal": 69,
+     "meal": "간식",
+     "name": "간이 된 삶은 달걀 1개(50g)"
+    },
+    {
+     "kcal": 57,
+     "meal": "저녁",
+     "name": "막걸리 120ml"
+    },
+    {
+     "kcal": 210,
+     "meal": "저녁",
+     "name": "양반 현미밥 130g"
+    },
+    {
+     "kcal": 125,
+     "meal": "저녁",
+     "name": "두부 반 모"
+    },
+    {
+     "kcal": 25,
+     "meal": "저녁",
+     "name": "김치"
+    }
+   ],
+   "active": null
+  },
+  {
+   "date": "2026-10-25",
+   "items": [
+    {
+     "kcal": 120,
+     "meal": "아침",
+     "name": "사과 1개"
+    },
+    {
+     "kcal": 95,
+     "meal": "아침",
+     "name": "땅콩버터(무첨가) 1큰술(약 16g)"
+    },
+    {
+     "kcal": 445,
+     "meal": "점심",
+     "name": "왕교자 1봉지 전부"
+    },
+    {
+     "kcal": 30,
+     "meal": "점심",
+     "name": "비비고 사골곰탕 500g"
+    },
+    {
+     "kcal": 12,
+     "meal": "점심",
+     "name": "시금치 한 줌"
+    },
+    {
+     "kcal": 25,
+     "meal": "점심",
+     "name": "김치"
+    },
+    {
+     "kcal": 5,
+     "meal": "간식",
+     "name": "아메리카노 150ml"
+    },
+    {
+     "kcal": 71,
+     "meal": "간식",
+     "name": "막걸리 150ml"
+    },
+    {
+     "kcal": 125,
+     "meal": "저녁",
+     "name": "두부 반 모"
+    },
+    {
+     "kcal": 140,
+     "meal": "저녁",
+     "name": "참치 85g 캔 (기름 따라냄)"
+    },
+    {
+     "kcal": 210,
+     "meal": "저녁",
+     "name": "양반 현미밥 130g"
+    },
+    {
+     "kcal": 25,
+     "meal": "저녁",
+     "name": "마른김 4장"
+    },
+    {
+     "kcal": 70,
+     "meal": "간식",
+     "name": "광동 쌍화 음료 120ml"
+    }
+   ],
+   "active": null
+  },
+  {
+   "date": "2026-10-26",
+   "items": [
+    {
+     "kcal": 80,
+     "meal": "아침",
+     "name": "저지방우유 200ml"
+    },
+    {
+     "kcal": 5,
+     "meal": "아침",
+     "name": "G7 블랙커피 2g"
+    },
+    {
+     "kcal": 706,
+     "meal": "점심",
+     "name": "와퍼"
+    },
+    {
+     "kcal": 40,
+     "meal": "간식",
+     "name": "귤 1개"
+    },
+    {
+     "kcal": 138,
+     "meal": "간식",
+     "name": "간이 된 삶은 달걀 2개"
+    },
+    {
+     "kcal": 141,
+     "meal": "저녁",
+     "name": "채소 토마토 스튜 1/3 냄비 (홀토마토·양파·당근·시금치·참치기름·버터)"
+    },
+    {
+     "kcal": 140,
+     "meal": "저녁",
+     "name": "참치 85g (기름은 스튜에 사용)"
+    },
+    {
+     "kcal": 210,
+     "meal": "저녁",
+     "name": "양반 현미밥 130g"
+    }
+   ],
+   "active": 220
+  },
+  {
+   "date": "2026-10-27",
+   "items": [
+    {
+     "kcal": 48,
+     "meal": "아침",
+     "name": "스타벅스 자몽허니 블랙티 350ml"
+    },
+    {
+     "kcal": 208,
+     "meal": "점심",
+     "name": "투썸 멀티 그레인 치킨 샐러드(270g)"
+    },
+    {
+     "kcal": 5,
+     "meal": "간식",
+     "name": "G7 블랙커피 2g"
+    },
+    {
+     "kcal": 120,
+     "meal": "저녁",
+     "name": "사과 1개"
+    },
+    {
+     "kcal": 95,
+     "meal": "저녁",
+     "name": "땅콩버터(무첨가) 1큰술(약 16g)"
+    },
+    {
+     "kcal": 385,
+     "meal": "저녁",
+     "name": "인도미 미고랭 1봉지(80g)"
+    },
+    {
+     "kcal": 69,
+     "meal": "저녁",
+     "name": "간이 된 삶은 달걀 1개(50g)"
+    },
+    {
+     "kcal": 158,
+     "meal": "저녁",
+     "name": "동원참치 150g 캔 절반(75g)"
+    },
+    {
+     "kcal": 23,
+     "meal": "저녁",
+     "name": "시금치 두 줌(약 100g)"
+    },
+    {
+     "kcal": 19,
+     "meal": "저녁",
+     "name": "마른김 3장"
+    },
+    {
+     "kcal": 140,
+     "meal": "간식",
+     "name": "달콤한 레드와인 약 120ml (박스 와인)"
+    }
+   ],
+   "active": 303
+  },
+  {
+   "date": "2026-10-28",
+   "items": [
+    {
+     "kcal": 80,
+     "meal": "아침",
+     "name": "저지방우유 200ml"
+    },
+    {
+     "kcal": 5,
+     "meal": "아침",
+     "name": "G7 블랙커피 2g"
+    },
+    {
+     "kcal": 35,
+     "meal": "점심",
+     "name": "미에로화이바 100ml"
+    },
+    {
+     "kcal": 138,
+     "meal": "점심",
+     "name": "간이 된 삶은 달걀 2개"
+    },
+    {
+     "kcal": 150,
+     "meal": "점심",
+     "name": "나물 모듬 (고사리·고구마줄기·시래기·취나물, 한 접시, 추정)"
+    },
+    {
+     "kcal": 60,
+     "meal": "점심",
+     "name": "감자조림 조금 (추정)"
+    },
+    {
+     "kcal": 210,
+     "meal": "점심",
+     "name": "양반 현미밥 130g"
+    },
+    {
+     "kcal": 158,
+     "meal": "점심",
+     "name": "동원참치 150g 캔 절반(75g)"
+    },
+    {
+     "kcal": 40,
+     "meal": "점심",
+     "name": "취나물 (비빔밥용)"
+    },
+    {
+     "kcal": 185,
+     "meal": "점심",
+     "name": "두부 220g"
+    },
+    {
+     "kcal": 90,
+     "meal": "간식",
+     "name": "자유시간 미니 2개 (10g×2)"
+    },
+    {
+     "kcal": 9,
+     "meal": "저녁",
+     "name": "ZEN 하이볼 0.0 레몬 350ml (무알코올)"
+    },
+    {
+     "kcal": 153,
+     "meal": "저녁",
+     "name": "비지 스튜 반 (스튜 165g·비지 65g·참치 조금)"
+    },
+    {
+     "kcal": 60,
+     "meal": "저녁",
+     "name": "한성 몬스터크랩 72g"
+    }
+   ],
+   "active": 420
+  },
+  {
+   "date": "2026-10-29",
+   "items": [
+    {
+     "carbs": 13,
+     "fat": 3.5,
+     "fiber": 0,
+     "kcal": 120,
+     "meal": "아침",
+     "name": "투썸 카페라떼 저지방우유 (레귤러, 추정)",
+     "protein": 10,
+     "sodium": 150,
+     "sugar": 13
+    },
+    {
+     "carbs": 1.45,
+     "fat": 0,
+     "fiber": 0,
+     "kcal": 7,
+     "meal": "점심",
+     "name": "바나프레소 히비스커스 티 HOT 500ml",
+     "protein": 0,
+     "sodium": 5,
+     "sugar": 0
+    },
+    {
+     "carbs": 36,
+     "fat": 11,
+     "fiber": 2.4,
+     "kcal": 300,
+     "meal": "점심",
+     "name": "손만두 4개 (고기·김치, 추정)",
+     "protein": 12,
+     "sodium": 720,
+     "sugar": 2.4
+    },
+    {
+     "carbs": 50,
+     "fat": 4,
+     "fiber": 2,
+     "kcal": 290,
+     "meal": "점심",
+     "name": "칼국수 반 그릇 (나눔, 추정)",
+     "protein": 9,
+     "sodium": 1300,
+     "sugar": 3
+    },
+    {
+     "carbs": 38,
+     "fat": 4,
+     "fiber": 2.5,
+     "kcal": 210,
+     "meal": "점심",
+     "name": "톳김밥 5조각 (달걀지단, 나눔, 추정)",
+     "protein": 6,
+     "sodium": 450,
+     "sugar": 3
+    },
+    {
+     "carbs": 3,
+     "fat": 12,
+     "fiber": 1.5,
+     "kcal": 136,
+     "meal": "간식",
+     "name": "바프 먼투썬 하루견과 블랙 20g",
+     "protein": 4,
+     "sodium": 0,
+     "sugar": 0.9
+    },
+    {
+     "carbs": 7,
+     "fat": 0,
+     "fiber": 0,
+     "kcal": 70,
+     "meal": "저녁",
+     "name": "달콤한 레드 박스와인 60g (추정)",
+     "protein": 0,
+     "sodium": 5,
+     "sugar": 5
+    },
+    {
+     "carbs": 15,
+     "fat": 6,
+     "fiber": 5,
+     "kcal": 153,
+     "meal": "저녁",
+     "name": "비지 채소 스튜 반 (10-28 제작, 추정)",
+     "protein": 9,
+     "sodium": 400,
+     "sugar": 4
+    }
+   ],
+   "active": 210
+  },
+  {
+   "date": "2026-10-30",
+   "items": [
+    {
+     "carbs": 13,
+     "fat": 3.5,
+     "fiber": 0,
+     "kcal": 120,
+     "meal": "아침",
+     "name": "투썸 카페라떼 저지방우유 (레귤러, 추정)",
+     "protein": 10,
+     "sodium": 150,
+     "sugar": 13
+    },
+    {
+     "carbs": 8,
+     "fat": 14,
+     "fiber": 3,
+     "kcal": 200,
+     "meal": "간식",
+     "name": "머거본 칼몬드 35g 1봉",
+     "protein": 11,
+     "sodium": 45,
+     "sugar": 2
+    },
+    {
+     "carbs": 0,
+     "fat": 0,
+     "fiber": 0,
+     "kcal": 0,
+     "meal": "간식",
+     "name": "나랑드사이다 제로",
+     "protein": 0,
+     "sodium": 0,
+     "sugar": 0
+    },
+    {
+     "carbs": 11,
+     "fat": 0.1,
+     "fiber": 1.3,
+     "kcal": 46,
+     "meal": "간식",
+     "name": "건자두 2알 (약 18g, 추정)",
+     "protein": 0.4,
+     "sodium": 1,
+     "sugar": 6.5
+    },
+    {
+     "carbs": 35,
+     "fat": 35,
+     "fiber": 2,
+     "kcal": 550,
+     "meal": "저녁",
+     "name": "모듬전 10조각: 두부·깻잎고기·고추고기·명태·고기전2·애호박·기타3 (추정)",
+     "protein": 22,
+     "sodium": 1000,
+     "sugar": 3
+    },
+    {
+     "carbs": 18,
+     "fat": 4,
+     "fiber": 2,
+     "kcal": 120,
+     "meal": "저녁",
+     "name": "도토리묵 무침 (나눔, 추정)",
+     "protein": 2,
+     "sodium": 500,
+     "sugar": 4
+    },
+    {
+     "carbs": 16,
+     "fat": 0,
+     "fiber": 0,
+     "kcal": 185,
+     "meal": "저녁",
+     "name": "막걸리 반병 375ml (추정)",
+     "protein": 2,
+     "sodium": 10,
+     "sugar": 7
+    }
+   ],
+   "active": null
+  },
+  {
+   "date": "2026-10-31",
+   "items": [
+    {
+     "carbs": 10,
+     "fat": 8,
+     "fiber": 1,
+     "kcal": 200,
+     "meal": "점심",
+     "name": "똠얌꿍 반 그릇 (큰 그릇, 나눔, 추정)",
+     "protein": 13,
+     "sodium": 1300,
+     "sugar": 5
+    },
+    {
+     "carbs": 65,
+     "fat": 13,
+     "fiber": 2.5,
+     "kcal": 425,
+     "meal": "점심",
+     "name": "파인애플 볶음밥 반 접시 (많은 양, 나눔, 추정)",
+     "protein": 11,
+     "sodium": 900,
+     "sugar": 10
+    },
+    {
+     "carbs": 58,
+     "fat": 15,
+     "fiber": 2.5,
+     "kcal": 425,
+     "meal": "점심",
+     "name": "새우 팟타이 반 접시 (많은 양, 나눔, 추정)",
+     "protein": 15,
+     "sodium": 1000,
+     "sugar": 12
+    },
+    {
+     "carbs": 19.6,
+     "fat": 1,
+     "fiber": 5.9,
+     "kcal": 88,
+     "meal": "저녁",
+     "name": "방울토마토 490g (추정)",
+     "protein": 4.3,
+     "sodium": 23,
+     "sugar": 13
+    },
+    {
+     "carbs": 14.5,
+     "fat": 0.1,
+     "fiber": 1.5,
+     "kcal": 55,
+     "meal": "간식",
+     "name": "단감 100g (추정)",
+     "protein": 0.5,
+     "sodium": 1,
+     "sugar": 12.5
+    }
+   ],
+   "active": 122
+  },
+  {
+   "date": "2026-11-01",
+   "items": [
+    {
+     "carbs": 17,
+     "fat": 0.2,
+     "fiber": 1.8,
+     "kcal": 66,
+     "meal": "아침",
+     "name": "단감 120g (추정)",
+     "protein": 0.6,
+     "sodium": 1,
+     "sugar": 15
+    },
+    {
+     "carbs": 0,
+     "fat": 37,
+     "fiber": 0,
+     "kcal": 495,
+     "meal": "점심",
+     "name": "장어구이 215g (추정)",
+     "protein": 39,
+     "sodium": 215,
+     "sugar": 0
+    },
+    {
+     "carbs": 40,
+     "fat": 1.2,
+     "fiber": 4,
+     "kcal": 175,
+     "meal": "점심",
+     "name": "햇반 파로 통곡물밥 110g",
+     "protein": 3.4,
+     "sodium": 0,
+     "sugar": 0
+    },
+    {
+     "carbs": 6.6,
+     "fat": 4.4,
+     "fiber": 3.9,
+     "kcal": 77,
+     "meal": "점심",
+     "name": "나물 110g (추정)",
+     "protein": 2.8,
+     "sodium": 440,
+     "sugar": 1.7
+    },
+    {
+     "carbs": 3.6,
+     "fat": 0.2,
+     "fiber": 0.4,
+     "kcal": 16,
+     "meal": "점심",
+     "name": "생강채 20g (추정)",
+     "protein": 0.4,
+     "sodium": 3,
+     "sugar": 0.3
+    },
+    {
+     "carbs": 6,
+     "fat": 2,
+     "fiber": 0.2,
+     "kcal": 45,
+     "meal": "간식",
+     "name": "자유시간 미니 1개",
+     "protein": 0.6,
+     "sodium": 10,
+     "sugar": 4.5
+    },
+    {
+     "carbs": 12,
+     "fat": 0.6,
+     "fiber": 3.6,
+     "kcal": 54,
+     "meal": "저녁",
+     "name": "방울토마토 300g (추정)",
+     "protein": 2.6,
+     "sodium": 14,
+     "sugar": 8
+    },
+    {
+     "carbs": 40,
+     "fat": 1.2,
+     "fiber": 4,
+     "kcal": 175,
+     "meal": "저녁",
+     "name": "햇반 파로 통곡물밥 110g",
+     "protein": 3.4,
+     "sodium": 0,
+     "sugar": 0
+    },
+    {
+     "carbs": 6.6,
+     "fat": 4.4,
+     "fiber": 3.9,
+     "kcal": 77,
+     "meal": "저녁",
+     "name": "나물 110g (추정)",
+     "protein": 2.8,
+     "sodium": 440,
+     "sugar": 1.7
+    },
+    {
+     "carbs": 3.4,
+     "fat": 8.5,
+     "fiber": 0.9,
+     "kcal": 143,
+     "meal": "저녁",
+     "name": "두부 170g (추정)",
+     "protein": 15.3,
+     "sodium": 9,
+     "sugar": 0.9
+    }
+   ],
+   "active": null
+  },
+  {
+   "date": "2026-11-02",
+   "items": [
+    {
+     "carbs": 15,
+     "fat": 6,
+     "fiber": 1,
+     "kcal": 150,
+     "meal": "아침",
+     "name": "투썸 두유라떼 (레귤러, 추정)",
+     "protein": 8,
+     "sodium": 150,
+     "sugar": 10
+    },
+    {
+     "carbs": 11,
+     "fat": 0.1,
+     "fiber": 1.3,
+     "kcal": 46,
+     "meal": "간식",
+     "name": "건자두 2알 (약 18g, 추정)",
+     "protein": 0.4,
+     "sodium": 1,
+     "sugar": 6.5
+    },
+    {
+     "carbs": 2,
+     "fat": 9.2,
+     "fiber": 0,
+     "kcal": 140,
+     "meal": "점심",
+     "name": "반숙란 2개 (50g×2)",
+     "protein": 12,
+     "sodium": 320,
+     "sugar": 1
+    },
+    {
+     "carbs": 12,
+     "fat": 4,
+     "fiber": 0.4,
+     "kcal": 90,
+     "meal": "간식",
+     "name": "자유시간 미니 2개",
+     "protein": 1.2,
+     "sodium": 20,
+     "sugar": 9
+    },
+    {
+     "carbs": 6.1,
+     "fat": 0.3,
+     "fiber": 1.8,
+     "kcal": 28,
+     "meal": "저녁",
+     "name": "방울토마토 153g (추정)",
+     "protein": 1.3,
+     "sodium": 7,
+     "sugar": 4
+    },
+    {
+     "carbs": 0,
+     "fat": 23,
+     "fiber": 0,
+     "kcal": 311,
+     "meal": "저녁",
+     "name": "장어구이 135g (추정)",
+     "protein": 24.3,
+     "sodium": 135,
+     "sugar": 0
+    },
+    {
+     "carbs": 36,
+     "fat": 0.9,
+     "fiber": 4,
+     "kcal": 160,
+     "meal": "저녁",
+     "name": "햇반 렌틸콩 현미밥 110g",
+     "protein": 4,
+     "sodium": 0,
+     "sugar": 0.5
+    },
+    {
+     "carbs": 5.4,
+     "fat": 0.2,
+     "fiber": 0.6,
+     "kcal": 24,
+     "meal": "저녁",
+     "name": "생강채 30g (추정)",
+     "protein": 0.5,
+     "sodium": 4,
+     "sugar": 0.5
+    },
+    {
+     "carbs": 6.6,
+     "fat": 4.4,
+     "fiber": 3.9,
+     "kcal": 77,
+     "meal": "저녁",
+     "name": "나물 110g (추정)",
+     "protein": 2.8,
+     "sodium": 440,
+     "sugar": 1.7
+    }
+   ],
+   "active": 177
+  },
+  {
+   "date": "2026-11-03",
+   "items": [
+    {
+     "carbs": 13,
+     "fat": 3.5,
+     "fiber": 0,
+     "kcal": 120,
+     "meal": "아침",
+     "name": "투썸 카페라떼 저지방우유 (레귤러, 추정)",
+     "protein": 10,
+     "sodium": 150,
+     "sugar": 13
+    },
+    {
+     "carbs": 11,
+     "fat": 0.1,
+     "fiber": 1.3,
+     "kcal": 46,
+     "meal": "간식",
+     "name": "건자두 2알 (약 18g, 추정)",
+     "protein": 0.4,
+     "sodium": 1,
+     "sugar": 6.5
+    },
+    {
+     "carbs": 7,
+     "fat": 4,
+     "fiber": 0,
+     "kcal": 60,
+     "meal": "간식",
+     "name": "제로 미니 감귤 케이크 1봉 14.3g",
+     "protein": 1,
+     "sodium": 50,
+     "sugar": 0
+    }
+   ],
+   "active": null
+  }
+ ]
+}
