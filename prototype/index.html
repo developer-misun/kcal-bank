@@ -81,7 +81,7 @@ form.add button[type=submit]{grid-column:1/-1;background:var(--accent);color:var
 .hrow .w{color:var(--muted);text-align:right;white-space:nowrap}
 .hrow .w.tap{color:var(--accent);text-decoration:underline dotted;text-underline-offset:3px;cursor:pointer}
 .note{font-size:.78rem;color:var(--muted);text-align:center}
-.tabs{display:grid;grid-template-columns:1fr 1fr 1fr;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
 .tabs button{border:none;background:none;padding:9px;border-radius:9px;font:inherit;font-weight:500;color:var(--muted);cursor:pointer}
 .tabs button[aria-selected="true"]{background:var(--accent-soft);color:var(--accent);font-weight:700}
 .view{display:flex;flex-direction:column;gap:18px}
@@ -154,6 +154,36 @@ form.padd .lab{font-size:.75rem;color:var(--muted);display:flex;flex-direction:c
 form.padd details{grid-column:1/-1;font-size:.85rem;color:var(--muted)}
 form.padd details .g{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
 form.padd button{grid-column:1/-1;background:var(--accent);color:var(--bg);border:none;border-radius:8px;padding:11px;font:inherit;font-weight:700;cursor:pointer}
+.range{display:flex;gap:6px}
+.range button{font:inherit;font-size:.82rem;padding:6px 14px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.range button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg);font-weight:700}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.tile span{font-size:.75rem;color:var(--muted)}
+.tile b{font-family:var(--mono);font-size:1.35rem;font-weight:600;line-height:1.3}
+.tile small{font-size:.72rem;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px}
+.chead{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.chead h2{margin:0}
+.legend{font-size:.72rem;color:var(--muted);display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.lg{display:inline-block;width:10px;height:10px;border-radius:2px;margin-left:6px}
+.lg.ok{background:var(--accent)} .lg.over{background:var(--over)}
+.lg.line{height:0;border-top:2px dashed var(--muted);border-radius:0;width:14px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .grid{stroke:var(--line);stroke-width:1}
+.chart .axis{fill:var(--muted);font-size:15px;font-family:var(--mono)}
+.chart .goal{stroke:var(--muted);stroke-width:1.5;stroke-dasharray:4 4}
+.chart .bar-ok{fill:var(--accent)} .chart .bar-over{fill:var(--over)}
+.chart .wline{fill:none;stroke:var(--accent);stroke-width:2}
+.chart .wdot{fill:var(--accent);stroke:var(--surface);stroke-width:2}
+.chart .vlab{fill:var(--ink);font-size:16px;font-family:var(--mono);font-weight:600}
+.chart .hit{fill:transparent;cursor:pointer}
+.chart .hit:hover,.chart .hit.on{fill:var(--ink);fill-opacity:.06}
+.cap{margin:0;font-size:.78rem;color:var(--muted)}
+.nutri.plain{border:none;padding:0}
+.tip{position:fixed;z-index:20;pointer-events:none;background:var(--ink);color:var(--bg);font-size:.78rem;line-height:1.4;padding:6px 10px;border-radius:8px;max-width:220px;box-shadow:0 4px 12px rgba(0,0,0,.18)}
+.tip b{font-family:var(--mono)}
+.daynav.off{visibility:hidden}
 @media (prefers-reduced-motion:reduce){.bar i{transition:none}}
 </style>
 </head>
@@ -170,12 +200,13 @@ form.padd button{grid-column:1/-1;background:var(--accent);color:var(--bg);borde
   </div>
 
   <div class="tabs" role="tablist">
-    <button role="tab" id="tabDiet" aria-selected="true">식단</button>
+    <button role="tab" id="tabDash" aria-selected="true">대시보드</button>
+    <button role="tab" id="tabDiet" aria-selected="false">식단</button>
     <button role="tab" id="tabPantry" aria-selected="false">영양 참고</button>
     <button role="tab" id="tabGoal" aria-selected="false">목표</button>
   </div>
 
-  <div class="view" id="viewDiet">
+  <div class="view" id="viewDiet" hidden>
   <section class="gauge" id="gauge">
     <div class="big"><span class="num" id="total">0</span><small id="goalSmall">/ 1,500 kcal</small><span class="dday" id="dDay"></span></div>
     <div class="bar"><i id="barFill" style="width:0%"></i></div>
@@ -242,11 +273,37 @@ form.padd button{grid-column:1/-1;background:var(--accent);color:var(--bg);borde
     <div class="bar"><i id="goalFill" style="width:0%"></i></div>
   </section>
 
-  <section>
-    <h2>지난 기록</h2>
-    <div class="hist" id="hist"></div>
-  </section>
   </div>
+
+  <div class="view" id="viewDash">
+    <div class="range" role="group" aria-label="기간">
+      <button type="button" data-r="14">14일</button><button type="button" data-r="30">30일</button><button type="button" data-r="all">전체</button>
+    </div>
+    <div class="tiles" id="dTiles"></div>
+    <section class="card">
+      <div class="chead"><h2>하루 칼로리</h2><span class="legend"><i class="lg ok"></i>목표 안 <i class="lg over"></i>목표 초과 <i class="lg line"></i>목표 <span id="goalLg"></span></span></div>
+      <div class="chart" id="chKcal"></div>
+    </section>
+    <section class="card">
+      <div class="chead"><h2>체중 변화 (시작 대비)</h2></div>
+      <div class="chart" id="chWeight"></div>
+      <p class="cap" id="capWeight"></p>
+    </section>
+    <section class="card">
+      <div class="chead"><h2>주간 저금통</h2><span class="legend">월요일마다 0부터</span></div>
+      <div class="chart" id="chBank"></div>
+    </section>
+    <section class="card">
+      <div class="chead"><h2>영양소 하루 평균</h2><span class="stdLabel" id="dStd"></span></div>
+      <div class="nutri plain" id="dNutri"></div>
+      <p class="hint" id="dNutriNote"></p>
+    </section>
+    <section>
+      <h2>일자별 기록</h2>
+      <div class="hist" id="hist"></div>
+    </section>
+  </div>
+  <div class="tip" id="tip" role="status" hidden></div>
 
   <div class="view" id="viewGoal" hidden>
     <form class="gform" id="gForm">
@@ -486,8 +543,193 @@ function render(){
     $("goalFill").style.width = (done*100) + "%";
   } else { $("goalText").textContent = `시작 ${START_W}kg → 목표 ${TARGET_W}kg. 체중을 입력하면 진행률이 보여요.`; $("goalFill").style.width = "0%"; }
 
+  renderDash();
+}
+const shownW = new Set();
+/* ================= 대시보드 ================= */
+let dRange = "30";
+try { const r = localStorage.getItem("dash-range"); if (["14","30","all"].includes(r)) dRange = r; } catch(e){}
+document.querySelectorAll(".range button").forEach(b => b.onclick = () => { dRange = b.dataset.r; try { localStorage.setItem("dash-range", dRange); } catch(e){} renderDash(); });
+const SVGNS = "http://www.w3.org/2000/svg";
+const el = (tag, attrs, parent) => { const n = document.createElementNS(SVGNS, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; };
+const addDays = (k, n) => { const [y,m,d] = k.split("-").map(Number); return keyOf(new Date(y, m-1, d+n)); };
+const mmdd = k => k.slice(5).replace("-", "/");
+const sgn = v => (v < 0 ? "−" : v > 0 ? "+" : "±") + fmt(Math.abs(v));
+const wDelta = w => { const d = Math.round((w - START_W) * 10) / 10; return (d < 0 ? "−" + Math.abs(d) : d > 0 ? "+" + d : "±0") + "kg"; };
+
+/* 툴팁: 마우스는 따라다니고, 터치는 누른 자리에 */
+const tip = $("tip");
+function showTip(ev, html){
+  tip.innerHTML = html; tip.hidden = false;
+  const x = ev.clientX ?? (ev.touches && ev.touches[0].clientX) ?? 0, y = ev.clientY ?? (ev.touches && ev.touches[0].clientY) ?? 0;
+  const r = tip.getBoundingClientRect();
+  tip.style.left = Math.max(8, Math.min(window.innerWidth - r.width - 8, x - r.width / 2)) + "px";
+  tip.style.top = Math.max(8, y - r.height - 14) + "px";
+}
+const hideTip = () => { tip.hidden = true; document.querySelectorAll(".hit.on").forEach(n => n.classList.remove("on")); };
+document.addEventListener("scroll", hideTip, {passive:true});
+document.addEventListener("click", e => { if (!e.target.closest(".hit")) hideTip(); });
+function bindHit(node, html, onOpen){
+  node.addEventListener("pointerenter", e => { if (e.pointerType === "mouse"){ node.classList.add("on"); showTip(e, html()); } });
+  node.addEventListener("pointermove", e => { if (e.pointerType === "mouse") showTip(e, html()); });
+  node.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") hideTip(); });
+  node.addEventListener("click", e => {
+    if (node.classList.contains("on") && onOpen && e.pointerType !== "mouse"){ hideTip(); onOpen(); return; }
+    if (e.pointerType === "mouse" && onOpen){ hideTip(); onOpen(); return; }
+    hideTip(); node.classList.add("on"); showTip(e, html() + (onOpen ? "<br><small>한 번 더 누르면 그날로 이동</small>" : ""));
+  });
+}
+const goDay = k => { cur = k; showTab("d"); render(); window.scrollTo({top:0, behavior:"smooth"}); };
+
+function rangeDays(){
+  const today = keyOf(new Date());
+  let from = dRange === "all" ? (allDates()[0] || today) : addDays(today, -(+dRange) + 1);
+  if (dRange === "all" && G.startDate && G.startDate < from) from = G.startDate;
+  const out = []; for (let k = from; k <= today; k = addDays(k, 1)) out.push(k);
+  return out;
+}
+
+function chartKcal(days){
+  const box = $("chKcal"); box.textContent = "";
+  const W = 520, H = 230, L = 40, R = 6, T = 10, B = 28, pw = W - L - R, ph = H - T - B;
+  const vals = days.map(k => sum(dayOf(k)));
+  const max = Math.max(GOAL * 1.2, ...vals) ;
+  const top = Math.ceil(max / 500) * 500;
+  const y = v => T + ph - v / top * ph;
+  const svg = el("svg", {viewBox:`0 0 ${W} ${H}`, role:"img", "aria-label":`하루 칼로리 막대 그래프, 목표 ${GOAL}kcal`}, box);
+  for (let v = 0; v <= top; v += 500){ el("line", {x1:L, x2:W-R, y1:y(v), y2:y(v), class:"grid"}, svg); const t = el("text", {x:L-4, y:y(v)+3, "text-anchor":"end", class:"axis"}, svg); t.textContent = v >= 1000 ? (v/1000)+"k" : v; }
+  const bw = pw / days.length, gap = Math.min(2, bw * 0.25), w = Math.max(1, bw - gap);
+  days.forEach((k, i) => {
+    const v = vals[i], x = L + i * bw + gap / 2;
+    if (v > 0){
+      const h = Math.max(1, y(0) - y(v)), r = Math.min(4, w / 2, h);
+      const x0 = x, x1 = x + w, y0 = y(0), y1 = y0 - h;
+      el("path", {d:`M${x0},${y0} V${y1 + r} Q${x0},${y1} ${x0 + r},${y1} H${x1 - r} Q${x1},${y1} ${x1},${y1 + r} V${y0} Z`, class: v > GOAL ? "bar-over" : "bar-ok"}, svg);
+    }
+    const step = days.length > 45 ? 21 : days.length > 20 ? 10 : 5;
+    if (i % step === 0 || i === days.length - 1){ const t = el("text", {x: x + w/2, y: H - 6, "text-anchor": i === 0 ? "start" : i === days.length - 1 ? "end" : "middle", class:"axis"}, svg); t.textContent = mmdd(k); }
+    const hit = el("rect", {x: L + i * bw, y: T, width: bw, height: ph, class:"hit"}, svg);
+    bindHit(hit, () => { const d = dayOf(k), ev = evalDay(d); return `${k}<br><b>${d.items.length ? fmt(v) + " kcal" : "기록 없음"}</b>` + (d.items.length ? (v > GOAL ? ` · ${fmt(v-GOAL)} 초과` : ` · ${fmt(GOAL-v)} 남음`) : "") + (ev ? `<br>${ev.emoji} ${ev.label}` : "") + (d.active ? `<br>워치 ${fmt(d.active)}` : ""); }, d => goDay(k));
+  });
+  el("line", {x1:L, x2:W-R, y1:y(GOAL), y2:y(GOAL), class:"goal"}, svg); $("goalLg").textContent = fmt(GOAL);
+}
+
+function chartWeight(days){
+  const box = $("chWeight"); box.textContent = "";
+  const pts = days.filter(k => T.body[k] && T.body[k].weightKg).map(k => ({k, w: T.body[k].weightKg, d: Math.round((T.body[k].weightKg - START_W) * 10) / 10}));
+  if (!pts.length){ box.textContent = ""; $("capWeight").textContent = "이 기간에 체중 기록이 없어요. 월요일 아침 공복에 재서 넣어 주세요."; return; }
+  const W = 520, H = 210, L = 40, R = 70, T0 = 16, B = 28, pw = W - L - R, ph = H - T0 - B;
+  const dmin = Math.min(0, ...pts.map(p => p.d), TARGET_W - START_W > -3 ? TARGET_W - START_W : -3), dmax = Math.max(0.5, ...pts.map(p => p.d));
+  const lo = Math.floor(dmin), hi = Math.ceil(dmax);
+  const x = k => L + (days.indexOf(k) / Math.max(1, days.length - 1)) * pw;
+  const y = v => T0 + (hi - v) / (hi - lo) * ph;
+  const svg = el("svg", {viewBox:`0 0 ${W} ${H}`, role:"img", "aria-label":"시작 체중 대비 변화 꺾은선 그래프"}, box);
+  const stepY = (hi - lo) > 6 ? 2 : 1;
+  for (let v = hi; v >= lo; v -= stepY){ el("line", {x1:L, x2:W-R, y1:y(v), y2:y(v), class:"grid"}, svg); const t = el("text", {x:L-4, y:y(v)+3, "text-anchor":"end", class:"axis"}, svg); t.textContent = (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v); }
+  const tgt = TARGET_W - START_W;
+  if (tgt >= lo){ el("line", {x1:L, x2:W-R, y1:y(tgt), y2:y(tgt), class:"goal"}, svg); const t = el("text", {x:W-R+4, y:y(tgt)+3, class:"axis"}, svg); t.textContent = "목표"; }
+  if (pts.length > 1) el("polyline", {points: pts.map(p => `${x(p.k)},${y(p.d)}`).join(" "), class:"wline"}, svg);
+  pts.forEach((p, i) => {
+    el("circle", {cx:x(p.k), cy:y(p.d), r:5, class:"wdot"}, svg);
+    if (i === pts.length - 1){ const t = el("text", {x:x(p.k)+8, y:y(p.d)+4, class:"vlab"}, svg); t.textContent = wDelta(p.w); }
+    const hit = el("circle", {cx:x(p.k), cy:y(p.d), r:14, class:"hit"}, svg);
+    bindHit(hit, () => `${p.k}<br><b>${wDelta(p.w)}</b> (시작 대비)`, null);
+  });
+  const fk = days[0], lk = days[days.length - 1];
+  [[fk, "start"], [lk, "end"]].forEach(([k, a]) => { const t = el("text", {x:x(k), y:H-6, "text-anchor":a, class:"axis"}, svg); t.textContent = mmdd(k); });
+  const last = pts[pts.length - 1];
+  $("capWeight").textContent = `최근 ${last.k} · 시작 대비 ${wDelta(last.w)} · 목표까지 ${Math.max(0, Math.round((last.w - TARGET_W) * 10) / 10)}kg. 실제 체중은 아래 일자별 기록에서 눌러 볼 수 있어요.`;
+}
+
+function weekBanks(days){
+  const weeks = {};
+  days.forEach(k => {
+    const [y,m,d] = k.split("-").map(Number); const dt = new Date(y, m-1, d); const mon = keyOf(new Date(y, m-1, d - (dt.getDay() + 6) % 7));
+    const dk = dayOf(k); if (!dk.items.length) { weeks[mon] = weeks[mon] || 0; return; }
+    weeks[mon] = (weeks[mon] || 0) + GOAL - sum(dk) + Math.max(0, ((+dk.active || 0) - (+G.watchBaseKcal || 0)) / 2);
+  });
+  return Object.entries(weeks).sort((a, b) => a[0] < b[0] ? -1 : 1);
+}
+function chartBank(days){
+  const box = $("chBank"); box.textContent = "";
+  const wk = weekBanks(days); if (!wk.length) return;
+  const W = 520, H = 200, L = 58, R = 6, T0 = 24, B = 28, pw = W - L - R, ph = H - T0 - B;
+  const amax = Math.max(500, ...wk.map(([, v]) => Math.abs(v)));
+  const top = Math.ceil(amax / 500) * 500, hasNeg = wk.some(([, v]) => v < 0);
+  const lo = hasNeg ? -top : 0;
+  const y = v => T0 + (top - v) / (top - lo) * ph;
+  const svg = el("svg", {viewBox:`0 0 ${W} ${H}`, role:"img", "aria-label":"주간 저금통 막대 그래프"}, box);
+  [top, 0, lo].filter((v, i, a) => a.indexOf(v) === i).forEach(v => { el("line", {x1:L, x2:W-R, y1:y(v), y2:y(v), class: v === 0 ? "goal" : "grid"}, svg); const t = el("text", {x:L-4, y:y(v)+3, "text-anchor":"end", class:"axis"}, svg); t.textContent = sgn(v); });
+  const bw = pw / wk.length, w = Math.min(56, bw * 0.6);
+  wk.forEach(([mon, v], i) => {
+    const cx = L + i * bw + bw / 2, x0 = cx - w / 2, x1 = cx + w / 2, y0 = y(0), y1 = y(v), r = Math.min(4, w / 2, Math.abs(y1 - y0));
+    if (Math.abs(v) >= 1){
+      const d = v >= 0 ? `M${x0},${y0} V${y1 + r} Q${x0},${y1} ${x0 + r},${y1} H${x1 - r} Q${x1},${y1} ${x1},${y1 + r} V${y0} Z`
+                       : `M${x0},${y0} V${y1 - r} Q${x0},${y1} ${x0 + r},${y1} H${x1 - r} Q${x1},${y1} ${x1},${y1 - r} V${y0} Z`;
+      el("path", {d, class: v >= 0 ? "bar-ok" : "bar-over"}, svg);
+    }
+    if (i === wk.length - 1 || wk.length <= 6){ const t = el("text", {x:cx, y: v >= 0 ? y1 - 6 : y1 + 18, "text-anchor":"middle", class:"vlab"}, svg); t.textContent = sgn(Math.round(v)); }
+    const t2 = el("text", {x:cx, y:H-6, "text-anchor":"middle", class:"axis"}, svg); t2.textContent = mmdd(mon) + "~";
+    const hit = el("rect", {x:L + i * bw, y:T0, width:bw, height:ph, class:"hit"}, svg);
+    bindHit(hit, () => `${mon} 주<br><b>${sgn(Math.round(v))} kcal</b>` + (v >= 0 ? " 남김" : " 넘음"), null);
+  });
+}
+
+function dashNutri(days){
+  const its = days.flatMap(k => dayOf(k).items);
+  const nd = days.filter(k => dayOf(k).items.some(i => has(i.protein) || has(i.carbs) || has(i.fat)));
+  const sd = STD[stdKey] || STD.custom; $("dStd").textContent = sd.label;
+  const box = $("dNutri"); box.textContent = "";
+  if (!nd.length){ $("dNutriNote").textContent = "이 기간에는 영양소 기록이 없어요."; return; }
+  const S = k => nd.reduce((a, day) => a + dayOf(day).items.reduce((b, i) => b + (+i[k] || 0), 0), 0) / nd.length;
+  const c = S("carbs"), p = S("protein"), f = S("fat"), fb = S("fiber"), sg = S("sugar"), na = S("sodium");
+  const mk = c*4 + p*4 + f*9, fp = mk > 0 ? f*9/mk*100 : 0;
+  const passDays = key => nd.filter(day => { const its2 = dayOf(day).items; const T2 = n => its2.reduce((a,i)=>a+(+i[n]||0),0);
+    const cc = T2("carbs"), pp = T2("protein"), ff = T2("fat"), m2 = cc*4+pp*4+ff*9;
+    return key === "carbs" ? cc >= sd.carb : key === "protein" ? pp >= sd.prot : key === "fat" ? (m2 > 0 && ff*9/m2*100 <= sd.fat) : key === "fiber" ? T2("fiber") >= sd.fib : key === "sugar" ? T2("sugar") <= sd.sug : T2("sodium") <= sd.na; }).length;
+  [{l:"탄수화물", k:"carbs", v:c, u:"g", goal:sd.carb, type:"min"}, {l:"단백질", k:"protein", v:p, u:"g", goal:sd.prot, type:"min"},
+   {l:"지방", k:"fat", v:fp, u:"%", goal:sd.fat, type:"max"}, {l:"식이섬유", k:"fiber", v:fb, u:"g", goal:sd.fib, type:"min"},
+   {l:"당류", k:"sugar", v:sg, u:"g", goal:sd.sug, type:"max", soft:sd.sugSoft}, {l:"나트륨", k:"sodium", v:na, u:"mg", goal:sd.na, type:"max"}].forEach(r => {
+    const row = document.createElement("div"); row.className = "nrow";
+    const ok = r.type === "min" ? r.v >= r.goal : r.v <= r.goal;
+    row.classList.add(r.type === "min" ? (ok ? "good" : "low") : (ok ? (r.soft && r.v > r.soft ? "mid" : "good") : "bad"));
+    const lab = document.createElement("span"); lab.className = "nl"; lab.textContent = r.l;
+    const bar = document.createElement("span"); bar.className = "nbar"; const fi = document.createElement("i"); fi.style.width = Math.min(100, r.v / r.goal * 100) + "%"; bar.appendChild(fi);
+    const val = document.createElement("span"); val.className = "nv num"; val.textContent = (r.u === "mg" ? fmt(r.v) : Math.round(r.v * 10) / 10) + r.u;
+    const gl = document.createElement("span"); gl.className = "ng"; gl.textContent = `기준 통과 ${passDays(r.k)}/${nd.length}일`;
+    row.append(lab, val, bar, gl); box.appendChild(row);
+  });
+  $("dNutriNote").textContent = `영양소가 기록된 ${nd.length}일의 하루 평균이에요. 대부분 추정값이에요.`;
+}
+
+function dashTiles(days){
+  const box = $("dTiles"); box.textContent = "";
+  const today = keyOf(new Date());
+  const lw = latestWeight();
+  const wb = weekBanks([...Array(7)].map((_, i) => addDays(today, -6 + i)).filter(k => { const [y,m,d] = today.split("-").map(Number); const t = new Date(y,m-1,d); const mon = keyOf(new Date(y,m-1,d-(t.getDay()+6)%7)); return k >= mon; }));
+  const bank = wb.length ? wb[wb.length - 1][1] : 0;
+  const rec = days.filter(k => dayOf(k).items.length);
+  const avg = rec.length ? rec.reduce((a, k) => a + sum(dayOf(k)), 0) / rec.length : 0;
+  const good = rec.filter(k => { const ev = evalDay(dayOf(k)); return ev && (ev.emoji === "😄" || ev.emoji === "🙂"); }).length;
+  const within = rec.filter(k => sum(dayOf(k)) <= GOAL).length;
+  [["시작 대비 체중", lw ? wDelta(lw.w) : "–", lw ? `${lw.k} 기준` : "체중을 넣어 주세요"],
+   ["이번 주 저금통", sgn(Math.round(bank)), "kcal"],
+   ["하루 평균", rec.length ? fmt(avg) : "–", `기록한 ${rec.length}일 · 목표 ${fmt(GOAL)}`],
+   ["목표 안에서 마친 날", rec.length ? `${within}/${rec.length}` : "–", `😄🙂 평가 ${good}일`]].forEach(([a, b, c]) => {
+    const t = document.createElement("div"); t.className = "tile";
+    const s1 = document.createElement("span"); s1.textContent = a; const b1 = document.createElement("b"); b1.textContent = b; const s2 = document.createElement("small"); s2.textContent = c;
+    t.append(s1, b1, s2); box.appendChild(t);
+  });
+}
+
+function renderDash(){
+  if (!$("viewDash")) return;
+  document.querySelectorAll(".range button").forEach(b => b.setAttribute("aria-pressed", b.dataset.r === dRange));
+  const days = rangeDays();
+  dashTiles(days); chartKcal(days); chartWeight(days); chartBank(days); dashNutri(days);
+  /* 일자별 기록 (기간 안, 최신부터) */
   const h = $("hist"); h.textContent = "";
-  const ks = allDates().reverse().slice(0,30);
+  const ks = days.filter(k => dayOf(k).items.length || dayOf(k).weight).reverse();
   if (!ks.length){ const e=document.createElement("div"); e.className="empty"; e.textContent="기록이 쌓이면 여기에 보여요."; h.appendChild(e); }
   ks.forEach(k => {
     const dk = dayOf(k), s = sum(dk);
@@ -499,18 +741,17 @@ function render(){
     b.children[3].textContent = dk.items.length ? fmt(s) : "";
     { const w = dk.weight, ws = b.children[4];
       if (w) {
-        const dlt = Math.round((w - START_W) * 10) / 10;
-        const dTxt = (dlt < 0 ? "−" + Math.abs(dlt) : dlt > 0 ? "+" + dlt : "±0") + "kg";
+        const dTxt = wDelta(w);
         const show = () => { ws.textContent = shownW.has(k) ? w + "kg" : dTxt; ws.title = shownW.has(k) ? "시작 대비 " + dTxt : "눌러서 실제 몸무게 보기"; };
         ws.classList.add("tap"); show();
         ws.onclick = e => { e.stopPropagation(); shownW.has(k) ? shownW.delete(k) : shownW.add(k); show(); };
       } else ws.textContent = "";
     }
-    b.onclick = () => { cur = k; render(); window.scrollTo({top:0,behavior:"smooth"}); };
+    b.onclick = () => goDay(k);
     h.appendChild(b);
   });
 }
-const shownW = new Set();
+
 
 /* 하루 평가: 칼로리 범위 + 영양소 6개 기준 통과 수 */
 function evalDay(d){
@@ -714,13 +955,15 @@ $("pForm").addEventListener("submit", e => {
 });
 
 const showTab = t => { if (t === true) t = "p"; if (t === false) t = "d";
-  [["d","viewDiet","tabDiet"],["p","viewPantry","tabPantry"],["g","viewGoal","tabGoal"]].forEach(([k,v,b]) => { $(v).hidden = k !== t; $(b).setAttribute("aria-selected", k === t); });
+  [["h","viewDash","tabDash"],["d","viewDiet","tabDiet"],["p","viewPantry","tabPantry"],["g","viewGoal","tabGoal"]].forEach(([k,v,b]) => { $(v).hidden = k !== t; $(b).setAttribute("aria-selected", k === t); });
+  document.querySelector(".daynav").classList.toggle("off", t !== "d");
   if (t === "g") fillGoal();
   try { localStorage.setItem("diet-tab", t); } catch(e){} };
 $("tabGoal").onclick = () => showTab("g");
+$("tabDash").onclick = () => showTab("h");
 $("tabDiet").onclick = () => showTab(false);
 $("tabPantry").onclick = () => showTab(true);
-try { const tb = localStorage.getItem("diet-tab"); if (tb === "p" || tb === "g") showTab(tb); } catch(e){}
+try { const tb = localStorage.getItem("diet-tab"); if (tb === "p" || tb === "g" || tb === "d") showTab(tb); else showTab("h"); } catch(e){ showTab("h"); }
 
 function renderAll(){ render(); renderPantry(); }
 lsLoad(); applyGoal(G); renderPantry();
