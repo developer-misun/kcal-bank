@@ -267,11 +267,6 @@ form.padd button{grid-column:1/-1;background:var(--accent);color:var(--bg);borde
     </div>
   </dialog>
 
-  <section class="goal">
-    <h2 style="margin:0" id="goalH">목표까지</h2>
-    <p id="goalText">체중을 입력하면 남은 무게가 보여요.</p>
-    <div class="bar"><i id="goalFill" style="width:0%"></i></div>
-  </section>
 
   </div>
 
@@ -468,7 +463,6 @@ function render(){
   $("goalSmall").textContent = `/ ${fmt(GOAL)} kcal`;
   $("appTitle").textContent = `${GOAL} 식단 기록장`;
   { const lw0 = latestWeight(); BMR = calcBMR(lw0 ? lw0.w : START_W); $("sBase").textContent = fmt(BMR); }
-  $("goalH").textContent = `목표 ${TARGET_W}kg까지`;
   $("sActive").textContent = d.active ? fmt(d.active) : "–";
   { const [y,m,dd] = cur.split("-").map(Number); const base = new Date(y,m-1,dd); const off = (base.getDay()+6)%7; let buf = 0;
     for (let i=off;i>=0;i--){ const k = keyOf(new Date(y,m-1,dd-i)); const dk = dayOf(k); if (dk.items.length) buf += GOAL - sum(dk) + Math.max(0, ((+dk.active||0) - (+G.watchBaseKcal||0)) / 2); }
@@ -535,13 +529,6 @@ function render(){
   { const p = []; if (d.active != null) p.push("워치 " + d.active); if (d.weight != null) p.push(d.weight + "kg");
     $("openBody").textContent = p.length ? p.join(" · ") : "워치 · 체중"; }
 
-  const lw = latestWeight();
-  if (lw){
-    const left = lw.w - TARGET_W, done = Math.max(0, Math.min(1, (START_W - lw.w)/(START_W - TARGET_W)));
-    $("goalText").innerHTML = "";
-    $("goalText").append(`최근 체중 ${lw.w}kg · `, Object.assign(document.createElement("b"),{textContent: left>0 ? `${left.toFixed(1)}kg 남음` : "목표 달성!"}), ` (시작 ${START_W}kg)`);
-    $("goalFill").style.width = (done*100) + "%";
-  } else { $("goalText").textContent = `시작 ${START_W}kg → 목표 ${TARGET_W}kg. 체중을 입력하면 진행률이 보여요.`; $("goalFill").style.width = "0%"; }
 
   renderDash();
 }
