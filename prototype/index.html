@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>1500 식단 기록장</title>
+<title>식단 기록장</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
@@ -197,7 +197,7 @@ form.padd button{grid-column:1/-1;background:var(--accent);color:var(--bg);borde
 
 <div class="wrap">
   <div class="top">
-    <h1 id="appTitle">1500 식단 기록장</h1>
+    <h1 id="appTitle">식단 기록장</h1>
     <div class="daynav">
       <button id="prev" aria-label="이전 날">‹</button>
       <span id="dayLabel" class="num"></span>
@@ -469,7 +469,6 @@ function render(){
   $("gauge").classList.toggle("over", over);
   $("leftPill").textContent = over ? `${fmt(t-GOAL)} kcal 초과` : `${fmt(GOAL-t)} kcal 남음` + (t < G.minKcal ? ` · 최소 ${fmt(G.minKcal)}까지 ${fmt(G.minKcal-t)}` : "");
   $("goalSmall").textContent = `/ ${fmt(GOAL)} kcal`;
-  $("appTitle").textContent = `${GOAL} 식단 기록장`;
   { const lw0 = latestWeight(); BMR = calcBMR(lw0 ? lw0.w : START_W); $("sBase").textContent = fmt(BMR); }
   $("sActive").textContent = d.active ? fmt(d.active) : "–";
   { const [y,m,dd] = cur.split("-").map(Number); const base = new Date(y,m-1,dd); const off = (base.getDay()+6)%7; let buf = 0;
