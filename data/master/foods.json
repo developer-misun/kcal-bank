@@ -1,0 +1,1075 @@
+{
+ "table": "foods",
+ "updatedAt": "2026-11-19",
+ "items": [
+  {
+   "id": "apple",
+   "name": "사과",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "반쪽 (125g)",
+    "amount": 125,
+    "unit": "g"
+   },
+   "kcal": 65,
+   "carbs": 17,
+   "protein": 0.3,
+   "fat": 0.2,
+   "fiber": 3,
+   "sugar": 13,
+   "sodium": 1,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "bibigo-sagol",
+   "name": "비비고 사골곰탕",
+   "category": "etc",
+   "serving": {
+    "label": "500g 1봉 (2인분)",
+    "amount": 500,
+    "unit": "g"
+   },
+   "kcal": 30,
+   "carbs": 0,
+   "protein": 3,
+   "fat": 2.1,
+   "fiber": 0,
+   "sugar": 0,
+   "sodium": 1180,
+   "satFat": 0.8,
+   "source": "label"
+  },
+  {
+   "id": "brown-rice",
+   "name": "양반 현미밥",
+   "category": "grain",
+   "serving": {
+    "label": "130g",
+    "amount": 130,
+    "unit": "g"
+   },
+   "kcal": 210,
+   "carbs": 45,
+   "protein": 3,
+   "fat": 1.8,
+   "fiber": 2.5,
+   "sugar": 0,
+   "sodium": 15,
+   "satFat": 0.6,
+   "source": "label"
+  },
+  {
+   "id": "cabbage",
+   "name": "양배추",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 25,
+   "carbs": 6,
+   "protein": 1.3,
+   "fat": 0.1,
+   "fiber": 2.5,
+   "sugar": 3,
+   "sodium": 18,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "calmond",
+   "name": "머거본 칼몬드",
+   "category": "snack_drink",
+   "serving": {
+    "label": "35g 1봉",
+    "amount": 35,
+    "unit": "g"
+   },
+   "kcal": 200,
+   "carbs": 8,
+   "protein": 11,
+   "fat": 14,
+   "fiber": 3,
+   "sugar": 2,
+   "sodium": 45,
+   "satFat": 1.4,
+   "source": "label"
+  },
+  {
+   "id": "cherry-tomato",
+   "name": "방울토마토",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "10개 (150g)",
+    "amount": 150,
+    "unit": "g"
+   },
+   "kcal": 27,
+   "carbs": 6,
+   "protein": 1.3,
+   "fat": 0.3,
+   "fiber": 1.8,
+   "sugar": 4,
+   "sodium": 7,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "chickpea",
+   "name": "병아리콩 통조림",
+   "category": "protein",
+   "serving": {
+    "label": "100g (물 버린 것)",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 120,
+   "carbs": 18,
+   "protein": 7,
+   "fat": 2,
+   "fiber": 5,
+   "sugar": 1,
+   "sodium": 250,
+   "satFat": 0.2,
+   "source": "estimate",
+   "note": "헹구면 나트륨이 줄어요"
+  },
+  {
+   "id": "coconut-milk",
+   "name": "코코넛밀크",
+   "category": "etc",
+   "serving": {
+    "label": "100ml",
+    "amount": 100,
+    "unit": "ml"
+   },
+   "kcal": 190,
+   "carbs": 3,
+   "protein": 2,
+   "fat": 19,
+   "fiber": 0,
+   "sugar": 2,
+   "sodium": 15,
+   "satFat": 17,
+   "source": "estimate"
+  },
+  {
+   "id": "creamcheese-walnut-bread",
+   "name": "크림치즈 호두 크랜베리 통밀빵",
+   "category": "grain",
+   "serving": {
+    "label": "100g (약 3조각)",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 300,
+   "carbs": 42,
+   "protein": 9,
+   "fat": 11,
+   "fiber": 4,
+   "sugar": 9,
+   "sodium": 380,
+   "satFat": 4,
+   "source": "estimate"
+  },
+  {
+   "id": "dongwon-tuna",
+   "name": "동원참치",
+   "category": "protein",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 210,
+   "carbs": 0,
+   "protein": 19,
+   "fat": 15,
+   "fiber": 0,
+   "sugar": 0,
+   "sodium": 430,
+   "satFat": 2.5,
+   "source": "label",
+   "note": "150g 캔"
+  },
+  {
+   "id": "eel",
+   "name": "장어구이 (소금구이)",
+   "category": "protein",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 230,
+   "carbs": 0,
+   "protein": 18,
+   "fat": 17,
+   "fiber": 0,
+   "sugar": 0,
+   "sodium": 100,
+   "satFat": 4,
+   "source": "estimate"
+  },
+  {
+   "id": "egg-boiled-nosalt",
+   "name": "집에서 삶은 무염 달걀",
+   "category": "protein",
+   "serving": {
+    "label": "100g (껍질 벗긴 것)",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 155,
+   "carbs": 1.1,
+   "protein": 12.6,
+   "fat": 10.6,
+   "fiber": 0,
+   "sugar": 1.1,
+   "sodium": 125,
+   "satFat": 3.3,
+   "source": "estimate"
+  },
+  {
+   "id": "egg-boiled",
+   "name": "간 된 삶은 달걀",
+   "category": "protein",
+   "serving": {
+    "label": "1개",
+    "amount": null,
+    "unit": null
+   },
+   "kcal": 69,
+   "carbs": 0.5,
+   "protein": 6.5,
+   "fat": 4.8,
+   "fiber": 0,
+   "sugar": 0.3,
+   "sodium": 215,
+   "satFat": 1.5,
+   "source": "label"
+  },
+  {
+   "id": "frozen-veg",
+   "name": "냉동 브로콜리·채소믹스",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 30,
+   "carbs": 5,
+   "protein": 3,
+   "fat": 0.4,
+   "fiber": 3,
+   "sugar": 1.5,
+   "sodium": 25,
+   "satFat": 0,
+   "source": "estimate",
+   "note": "오래 둘 수 있어요"
+  },
+  {
+   "id": "g7",
+   "name": "G7 블랙커피",
+   "category": "snack_drink",
+   "serving": {
+    "label": "2g 1봉",
+    "amount": 2,
+    "unit": "g"
+   },
+   "kcal": 5,
+   "carbs": null,
+   "protein": null,
+   "fat": null,
+   "fiber": null,
+   "sugar": null,
+   "sodium": null,
+   "satFat": null,
+   "source": "estimate"
+  },
+  {
+   "id": "gim",
+   "name": "김",
+   "category": "etc",
+   "serving": {
+    "label": "전장 1장 (2g)",
+    "amount": 2,
+    "unit": "g"
+   },
+   "kcal": 8,
+   "carbs": 0.8,
+   "protein": 0.8,
+   "fat": 0.1,
+   "fiber": 0.7,
+   "sugar": 0,
+   "sodium": 10,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "greek-yogurt",
+   "name": "그릭요거트",
+   "category": "dairy",
+   "serving": {
+    "label": "100g (무가당)",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 90,
+   "carbs": 5,
+   "protein": 9,
+   "fat": 3.5,
+   "fiber": 0,
+   "sugar": 4,
+   "sodium": 40,
+   "satFat": 2.3,
+   "source": "estimate"
+  },
+  {
+   "id": "grilled-mackerel",
+   "name": "고등어구이",
+   "category": "protein",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 240,
+   "carbs": 0,
+   "protein": 22,
+   "fat": 16,
+   "fiber": 0,
+   "sugar": 0,
+   "sodium": 520,
+   "satFat": 3.5,
+   "source": "estimate"
+  },
+  {
+   "id": "hbaf-black",
+   "name": "바프 먼투썬 하루견과 블랙",
+   "category": "snack_drink",
+   "serving": {
+    "label": "20g 1봉",
+    "amount": 20,
+    "unit": "g"
+   },
+   "kcal": 136,
+   "carbs": 3,
+   "protein": 4,
+   "fat": 12,
+   "fiber": 1.5,
+   "sugar": 0.9,
+   "sodium": 0,
+   "satFat": 1.4,
+   "source": "label"
+  },
+  {
+   "id": "hetbahn-farro",
+   "name": "햇반 파로 통곡물밥",
+   "category": "grain",
+   "serving": {
+    "label": "110g 1개",
+    "amount": 110,
+    "unit": "g"
+   },
+   "kcal": 175,
+   "carbs": 40,
+   "protein": 3.4,
+   "fat": 1.2,
+   "fiber": 4,
+   "sugar": 0,
+   "sodium": 0,
+   "satFat": 0,
+   "source": "label"
+  },
+  {
+   "id": "hetbahn-lentil",
+   "name": "햇반 렌틸콩 현미밥",
+   "category": "grain",
+   "serving": {
+    "label": "110g 1개",
+    "amount": 110,
+    "unit": "g"
+   },
+   "kcal": 160,
+   "carbs": 36,
+   "protein": 4,
+   "fat": 0.9,
+   "fiber": 4,
+   "sugar": 0.5,
+   "sodium": 0,
+   "satFat": 0,
+   "source": "label"
+  },
+  {
+   "id": "high-protein-yogurt-150",
+   "name": "요프로 고단백 요거트",
+   "category": "dairy",
+   "serving": {
+    "label": "150g 1컵",
+    "amount": 150,
+    "unit": "g"
+   },
+   "kcal": 84,
+   "carbs": 6,
+   "protein": 15,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 2.3,
+   "sodium": 85,
+   "satFat": 0,
+   "source": "label"
+  },
+  {
+   "id": "homemade-tomato-curry",
+   "name": "직접 만든 토마토 채소 카레",
+   "category": "grain",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 91,
+   "carbs": 11.1,
+   "protein": 2.6,
+   "fat": 4.3,
+   "fiber": 1.7,
+   "sugar": 3.8,
+   "sodium": 618,
+   "satFat": 2.3,
+   "source": "estimate"
+  },
+  {
+   "id": "indomie",
+   "name": "인도미 미고랭",
+   "category": "grain",
+   "serving": {
+    "label": "80g 1봉",
+    "amount": 80,
+    "unit": "g"
+   },
+   "kcal": 385,
+   "carbs": null,
+   "protein": null,
+   "fat": 17,
+   "fiber": null,
+   "sugar": null,
+   "sodium": 700,
+   "satFat": 8,
+   "source": "label"
+  },
+  {
+   "id": "kimchi",
+   "name": "김치",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "50g",
+    "amount": 50,
+    "unit": "g"
+   },
+   "kcal": 10,
+   "carbs": 2,
+   "protein": 0.8,
+   "fat": 0.2,
+   "fiber": 1.2,
+   "sugar": 0.5,
+   "sodium": 300,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "lentil",
+   "name": "렌틸콩 (삶은 것)",
+   "category": "protein",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 116,
+   "carbs": 20,
+   "protein": 9,
+   "fat": 0.4,
+   "fiber": 8,
+   "sugar": 1.8,
+   "sodium": 2,
+   "satFat": 0.1,
+   "source": "estimate"
+  },
+  {
+   "id": "mackerel-can",
+   "name": "고등어 통조림",
+   "category": "protein",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 190,
+   "carbs": 0,
+   "protein": 19,
+   "fat": 12,
+   "fiber": 0,
+   "sugar": 0,
+   "sodium": 350,
+   "satFat": 3,
+   "source": "estimate",
+   "note": "오메가3가 많아요"
+  },
+  {
+   "id": "marketo-brownie-cc",
+   "name": "마켓오 크림치즈 브라우니",
+   "category": "snack_drink",
+   "serving": {
+    "label": "1개 20g",
+    "amount": 20,
+    "unit": "g"
+   },
+   "kcal": 93,
+   "carbs": 11,
+   "protein": 1,
+   "fat": 5,
+   "fiber": 0,
+   "sugar": 7,
+   "sodium": 60,
+   "satFat": 3.2,
+   "source": "label",
+   "note": "포화지방 1개 3.2g"
+  },
+  {
+   "id": "mielo",
+   "name": "미에로화이바",
+   "category": "snack_drink",
+   "serving": {
+    "label": "100ml",
+    "amount": 100,
+    "unit": "ml"
+   },
+   "kcal": 35,
+   "carbs": 10,
+   "protein": 0,
+   "fat": 0,
+   "fiber": 2.5,
+   "sugar": 7,
+   "sodium": null,
+   "satFat": 0,
+   "source": "label"
+  },
+  {
+   "id": "milk-lowfat",
+   "name": "저지방우유",
+   "category": "dairy",
+   "serving": {
+    "label": "200ml",
+    "amount": 200,
+    "unit": "ml"
+   },
+   "kcal": 80,
+   "carbs": 10,
+   "protein": 6.5,
+   "fat": 2,
+   "fiber": 0,
+   "sugar": 10,
+   "sodium": 110,
+   "satFat": 1.3,
+   "source": "label"
+  },
+  {
+   "id": "monster-crab",
+   "name": "한성 몬스터크랩",
+   "category": "protein",
+   "serving": {
+    "label": "72g",
+    "amount": 72,
+    "unit": "g"
+   },
+   "kcal": 60,
+   "carbs": 7,
+   "protein": 6,
+   "fat": 0.8,
+   "fiber": 0,
+   "sugar": 3,
+   "sodium": 510,
+   "satFat": null,
+   "source": "label"
+  },
+  {
+   "id": "mozzarella",
+   "name": "모짜렐라 치즈",
+   "category": "dairy",
+   "serving": {
+    "label": "20g",
+    "amount": 20,
+    "unit": "g"
+   },
+   "kcal": 60,
+   "carbs": 0.5,
+   "protein": 4.5,
+   "fat": 4.5,
+   "fiber": 0,
+   "sugar": 0.2,
+   "sodium": 100,
+   "satFat": 3,
+   "source": "estimate"
+  },
+  {
+   "id": "murgerbon-walnut-jeonggwa",
+   "name": "머거본 호두정과",
+   "category": "snack_drink",
+   "serving": {
+    "label": "30g",
+    "amount": 30,
+    "unit": "g"
+   },
+   "kcal": 192,
+   "carbs": 9.9,
+   "protein": 3.9,
+   "fat": 15.6,
+   "fiber": 1.6,
+   "sugar": 6.3,
+   "sodium": 30,
+   "satFat": 1.5,
+   "source": "label"
+  },
+  {
+   "id": "mushroom",
+   "name": "느타리·표고버섯",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 25,
+   "carbs": 5,
+   "protein": 2.5,
+   "fat": 0.3,
+   "fiber": 2.8,
+   "sugar": 1,
+   "sodium": 5,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "namul",
+   "name": "나물 모듬 (고사리·고구마줄기·시래기·취나물)",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "100g (무친 나물)",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 70,
+   "carbs": 6,
+   "protein": 2.5,
+   "fat": 4,
+   "fiber": 3.5,
+   "sugar": 1.5,
+   "sodium": 400,
+   "satFat": 0.6,
+   "source": "estimate"
+  },
+  {
+   "id": "natto",
+   "name": "낫토",
+   "category": "protein",
+   "serving": {
+    "label": "1팩 (50g)",
+    "amount": 50,
+    "unit": "g"
+   },
+   "kcal": 100,
+   "carbs": 6,
+   "protein": 8,
+   "fat": 5,
+   "fiber": 3,
+   "sugar": 1,
+   "sodium": 5,
+   "satFat": 0.7,
+   "source": "estimate"
+  },
+  {
+   "id": "oatmeal",
+   "name": "오트밀",
+   "category": "grain",
+   "serving": {
+    "label": "20g (3큰술)",
+    "amount": 20,
+    "unit": "g"
+   },
+   "kcal": 75,
+   "carbs": 13,
+   "protein": 2.7,
+   "fat": 1.4,
+   "fiber": 2,
+   "sugar": 0.2,
+   "sodium": 0,
+   "satFat": 0.3,
+   "source": "estimate"
+  },
+  {
+   "id": "peanut-butter",
+   "name": "무첨가 땅콩버터",
+   "category": "etc",
+   "serving": {
+    "label": "1큰술 (16g)",
+    "amount": 16,
+    "unit": "g"
+   },
+   "kcal": 95,
+   "carbs": 3,
+   "protein": 4,
+   "fat": 8,
+   "fiber": 1.3,
+   "sugar": 1,
+   "sodium": 0,
+   "satFat": 1.5,
+   "source": "estimate"
+  },
+  {
+   "id": "pocari-500",
+   "name": "포카리스웨트",
+   "category": "snack_drink",
+   "serving": {
+    "label": "500ml 1병",
+    "amount": 500,
+    "unit": "ml"
+   },
+   "kcal": 120,
+   "carbs": 30,
+   "protein": 0,
+   "fat": 0,
+   "fiber": 0,
+   "sugar": 29,
+   "sodium": 250,
+   "satFat": 0,
+   "source": "label"
+  },
+  {
+   "id": "pork-shoulder",
+   "name": "돼지 앞다리 수육",
+   "category": "protein",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 200,
+   "carbs": 0,
+   "protein": 20,
+   "fat": 13,
+   "fiber": 0,
+   "sugar": 0,
+   "sodium": 60,
+   "satFat": 4.5,
+   "source": "estimate"
+  },
+  {
+   "id": "pretties-mini-pretzel",
+   "name": "프레티스 미니 프레첼",
+   "category": "snack_drink",
+   "serving": {
+    "label": "42.5g 1봉",
+    "amount": 42.5,
+    "unit": "g"
+   },
+   "kcal": 166,
+   "carbs": 30,
+   "protein": 5,
+   "fat": 2.9,
+   "fiber": 1.2,
+   "sugar": 2,
+   "sodium": 510,
+   "satFat": 2.2,
+   "source": "label"
+  },
+  {
+   "id": "pulmuone-minari-mandu",
+   "name": "풀무원 생만두 고기미나리",
+   "category": "grain",
+   "serving": {
+    "label": "100g (400g 봉의 1/4)",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 181,
+   "carbs": 17.5,
+   "protein": 7.5,
+   "fat": 9.5,
+   "fiber": 2,
+   "sugar": 1.8,
+   "sodium": 360,
+   "satFat": 3.5,
+   "source": "label"
+  },
+  {
+   "id": "radish",
+   "name": "무",
+   "category": "veg_fruit",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 18,
+   "carbs": 4,
+   "protein": 0.7,
+   "fat": 0.1,
+   "fiber": 1.5,
+   "sugar": 2.5,
+   "sodium": 20,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "red-wine",
+   "name": "달콤한 레드 박스와인",
+   "category": "snack_drink",
+   "serving": {
+    "label": "60g",
+    "amount": 60,
+    "unit": "g"
+   },
+   "kcal": 70,
+   "carbs": 7,
+   "protein": 0,
+   "fat": 0,
+   "fiber": null,
+   "sugar": 5,
+   "sodium": 5,
+   "satFat": 0,
+   "source": "estimate"
+  },
+  {
+   "id": "sajo-tuna",
+   "name": "사조참치",
+   "category": "protein",
+   "serving": {
+    "label": "85g 1캔",
+    "amount": 85,
+    "unit": "g"
+   },
+   "kcal": 210,
+   "carbs": null,
+   "protein": 16,
+   "fat": null,
+   "fiber": null,
+   "sugar": null,
+   "sodium": null,
+   "satFat": null,
+   "source": "label"
+  },
+  {
+   "id": "sb-golden-curry-hot",
+   "name": "에스비 골든카레 매운맛 (고형)",
+   "category": "etc",
+   "serving": {
+    "label": "220g 1상자",
+    "amount": 220,
+    "unit": "g"
+   },
+   "kcal": 1070,
+   "carbs": 114,
+   "protein": 16,
+   "fat": 61,
+   "fiber": 4,
+   "sugar": 22,
+   "sodium": 9150,
+   "satFat": 36,
+   "source": "label"
+  },
+  {
+   "id": "smoked-salmon",
+   "name": "훈제연어",
+   "category": "protein",
+   "serving": {
+    "label": "50g",
+    "amount": 50,
+    "unit": "g"
+   },
+   "kcal": 90,
+   "carbs": 0,
+   "protein": 10,
+   "fat": 5,
+   "fiber": 0,
+   "sugar": 0,
+   "sodium": 600,
+   "satFat": 1,
+   "source": "estimate"
+  },
+  {
+   "id": "soft-egg",
+   "name": "반숙란",
+   "category": "protein",
+   "serving": {
+    "label": "1개 (50g)",
+    "amount": 50,
+    "unit": "g"
+   },
+   "kcal": 70,
+   "carbs": 1,
+   "protein": 6,
+   "fat": 4.6,
+   "fiber": 0,
+   "sugar": 0.5,
+   "sodium": 160,
+   "satFat": 1.5,
+   "source": "label"
+  },
+  {
+   "id": "spam",
+   "name": "스팸 (캔햄)",
+   "category": "protein",
+   "serving": {
+    "label": "1/4캔 50g",
+    "amount": 50,
+    "unit": "g"
+   },
+   "kcal": 150,
+   "carbs": 1.5,
+   "protein": 6.5,
+   "fat": 13,
+   "fiber": 0,
+   "sugar": 0.5,
+   "sodium": 560,
+   "satFat": 5,
+   "source": "estimate"
+  },
+  {
+   "id": "string-cheese",
+   "name": "스트링치즈",
+   "category": "dairy",
+   "serving": {
+    "label": "1개 (20g)",
+    "amount": 20,
+    "unit": "g"
+   },
+   "kcal": 60,
+   "carbs": 0.5,
+   "protein": 4.5,
+   "fat": 4.5,
+   "fiber": 0,
+   "sugar": 0.3,
+   "sodium": 150,
+   "satFat": 3,
+   "source": "estimate"
+  },
+  {
+   "id": "tofu",
+   "name": "두부",
+   "category": "protein",
+   "serving": {
+    "label": "100g",
+    "amount": 100,
+    "unit": "g"
+   },
+   "kcal": 84,
+   "carbs": 2,
+   "protein": 9,
+   "fat": 5,
+   "fiber": 0.5,
+   "sugar": 0.5,
+   "sodium": 5,
+   "satFat": 0.8,
+   "source": "estimate"
+  },
+  {
+   "id": "twosome-cappuccino",
+   "name": "투썸 카푸치노 HOT",
+   "category": "snack_drink",
+   "serving": {
+    "label": "레귤러 355ml",
+    "amount": 355,
+    "unit": "ml"
+   },
+   "kcal": 145,
+   "carbs": 11,
+   "protein": 6,
+   "fat": 8,
+   "fiber": 0,
+   "sugar": 9,
+   "sodium": 75,
+   "satFat": 4,
+   "source": "label"
+  },
+  {
+   "id": "twosome-salad",
+   "name": "투썸 멀티그레인 치킨 샐러드",
+   "category": "protein",
+   "serving": {
+    "label": "270g",
+    "amount": 270,
+    "unit": "g"
+   },
+   "kcal": 208,
+   "carbs": null,
+   "protein": 19,
+   "fat": null,
+   "fiber": null,
+   "sugar": null,
+   "sodium": 680,
+   "satFat": null,
+   "source": "label"
+  },
+  {
+   "id": "vegemil-b",
+   "name": "베지밀B",
+   "category": "snack_drink",
+   "serving": {
+    "label": "190ml 병",
+    "amount": 190,
+    "unit": "ml"
+   },
+   "kcal": 125,
+   "carbs": 11,
+   "protein": 6,
+   "fat": 6,
+   "fiber": 0.6,
+   "sugar": 10,
+   "sodium": 150,
+   "satFat": 1.5,
+   "source": "label"
+  },
+  {
+   "id": "whole-tomato",
+   "name": "포모도리 필라티 (홀토마토 통조림)",
+   "category": "etc",
+   "serving": {
+    "label": "400g 1캔",
+    "amount": 400,
+    "unit": "g"
+   },
+   "kcal": 84,
+   "carbs": 12,
+   "protein": 4.8,
+   "fat": 2,
+   "fiber": 4.8,
+   "sugar": 12,
+   "sodium": 160,
+   "satFat": 0,
+   "source": "label"
+  },
+  {
+   "id": "zero-mini-gamgyul",
+   "name": "제로 미니 감귤 케이크",
+   "category": "snack_drink",
+   "serving": {
+    "label": "1봉 14.3g",
+    "amount": 14.3,
+    "unit": "g"
+   },
+   "kcal": 60,
+   "carbs": 7,
+   "protein": 1,
+   "fat": 4,
+   "fiber": null,
+   "sugar": 0,
+   "sodium": 50,
+   "satFat": 2.1,
+   "source": "label"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "table": "settings",
+ "items": [
+  {
+   "id": "goal",
+   "sex": "f",
+   "age": 30,
+   "height": 160,
+   "activityLevel": 1.375,
+   "startDate": null,
+   "startWeight": 60,
+   "targetWeight": 55,
+   "goalKcal": 1500,
+   "minKcal": 1200,
+   "watchBaseKcal": 200,
+   "standardId": "custom"
+  }
+ ]
+}

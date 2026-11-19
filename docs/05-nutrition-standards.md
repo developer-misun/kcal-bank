@@ -1,6 +1,6 @@
 # 05. 영양소 기준
 
-전체 값은 `data/nutrition-standards.json`.
+전체 값은 `data/master/nutrition-standards.json`.
 
 ## 출처
 **2025 한국인 영양소 섭취기준** (보건복지부·한국영양학회, 2025년 12월 개정)

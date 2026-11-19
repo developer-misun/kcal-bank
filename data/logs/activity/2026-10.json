@@ -1,0 +1,30 @@
+{
+ "table": "activity",
+ "month": "2026-10",
+ "items": [
+  {
+   "date": "2026-10-20",
+   "activeKcal": 106
+  },
+  {
+   "date": "2026-10-26",
+   "activeKcal": 220
+  },
+  {
+   "date": "2026-10-27",
+   "activeKcal": 303
+  },
+  {
+   "date": "2026-10-28",
+   "activeKcal": 420
+  },
+  {
+   "date": "2026-10-29",
+   "activeKcal": 210
+  },
+  {
+   "date": "2026-10-31",
+   "activeKcal": 122
+  }
+ ]
+}

@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "settings",
+  "type": "object",
+  "required": [
+    "table",
+    "items"
+  ],
+  "properties": {
+    "table": {
+      "const": "settings"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "goalKcal",
+          "minKcal"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "sex": {
+            "enum": [
+              "f",
+              "m"
+            ]
+          },
+          "age": {
+            "type": "integer"
+          },
+          "height": {
+            "type": "number"
+          },
+          "activityLevel": {
+            "type": "number"
+          },
+          "startDate": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "startWeight": {
+            "type": "number"
+          },
+          "targetWeight": {
+            "type": "number"
+          },
+          "goalKcal": {
+            "type": "number"
+          },
+          "minKcal": {
+            "type": "number"
+          },
+          "watchBaseKcal": {
+            "type": "number"
+          },
+          "standardId": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

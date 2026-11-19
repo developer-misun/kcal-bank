@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "entries",
+  "type": "object",
+  "required": [
+    "table",
+    "items"
+  ],
+  "properties": {
+    "table": {
+      "const": "entries"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "date",
+          "meal",
+          "name",
+          "kcal",
+          "source"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}-\\d{2,}$"
+          },
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "meal": {
+            "enum": [
+              "breakfast",
+              "lunch",
+              "dinner",
+              "snack"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "unit": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "foodId": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "kcal": {
+            "type": "number",
+            "minimum": 0
+          },
+          "carbs": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "protein": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "fat": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "fiber": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "sugar": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "sodium": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "source": {
+            "enum": [
+              "label",
+              "estimate",
+              "unknown"
+            ]
+          },
+          "label": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "month": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}$"
+    }
+  }
+}

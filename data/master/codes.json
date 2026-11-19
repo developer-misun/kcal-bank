@@ -1,0 +1,90 @@
+{
+ "table": "codes",
+ "updatedAt": "2026-11-19",
+ "meal": [
+  {
+   "code": "breakfast",
+   "label": "아침"
+  },
+  {
+   "code": "lunch",
+   "label": "점심"
+  },
+  {
+   "code": "dinner",
+   "label": "저녁"
+  },
+  {
+   "code": "snack",
+   "label": "간식"
+  }
+ ],
+ "category": [
+  {
+   "code": "protein",
+   "label": "단백질"
+  },
+  {
+   "code": "veg_fruit",
+   "label": "채소·과일"
+  },
+  {
+   "code": "grain",
+   "label": "밥·면·곡물"
+  },
+  {
+   "code": "dairy",
+   "label": "유제품"
+  },
+  {
+   "code": "snack_drink",
+   "label": "간식·음료"
+  },
+  {
+   "code": "etc",
+   "label": "양념·기타"
+  }
+ ],
+ "source": [
+  {
+   "code": "label",
+   "label": "성분표"
+  },
+  {
+   "code": "estimate",
+   "label": "추정"
+  },
+  {
+   "code": "unknown",
+   "label": "미표기"
+  }
+ ],
+ "sex": [
+  {
+   "code": "f",
+   "label": "여성"
+  },
+  {
+   "code": "m",
+   "label": "남성"
+  }
+ ],
+ "activityLevel": [
+  {
+   "code": 1.2,
+   "label": "거의 앉아서"
+  },
+  {
+   "code": 1.375,
+   "label": "가볍게"
+  },
+  {
+   "code": 1.55,
+   "label": "보통"
+  },
+  {
+   "code": 1.725,
+   "label": "활발"
+  }
+ ]
+}

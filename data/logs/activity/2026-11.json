@@ -1,0 +1,42 @@
+{
+ "table": "activity",
+ "month": "2026-11",
+ "items": [
+  {
+   "date": "2026-11-02",
+   "activeKcal": 177
+  },
+  {
+   "date": "2026-11-03",
+   "activeKcal": 318
+  },
+  {
+   "date": "2026-11-04",
+   "activeKcal": 207
+  },
+  {
+   "date": "2026-11-06",
+   "activeKcal": 391
+  },
+  {
+   "date": "2026-11-10",
+   "activeKcal": 818
+  },
+  {
+   "date": "2026-11-15",
+   "activeKcal": 392
+  },
+  {
+   "date": "2026-11-16",
+   "activeKcal": 371
+  },
+  {
+   "date": "2026-11-17",
+   "activeKcal": 383
+  },
+  {
+   "date": "2026-11-18",
+   "activeKcal": 572
+  }
+ ]
+}

@@ -18,9 +18,10 @@
 | `docs/06-release.md` | 스토어 배포 체크리스트 |
 | `docs/07-roadmap.md` | 단계별 계획, 아직 정하지 않은 것 |
 | `prototype/index.html` | 동작하는 웹 프로토타입 (브라우저로 바로 열림, 브라우저 저장소 사용) |
-| `data/foods.json` | 음식·제품 영양 DB 약 40개 (성분표 확인값 + 추정값) |
-| `data/nutrition-standards.json` | 연령·성별 영양소 기준표 |
-| `data/sample-days.json` | 실제 사용 기록 15일 (건강 정보 제외) |
+| `data/master/` | 음식 영양 DB(56개), 영양소 기준표, 코드표 |
+| `data/logs/` | 실제 사용 기록 (먹은 음식, 워치 활동). 월별 파일, 매일 전날 분까지 갱신. 건강 정보 제외 |
+| `data/schema/` | 테이블별 JSON Schema |
+| `scripts/validate-data.mjs` | 데이터 검사: `node scripts/validate-data.mjs` |
 | `CLAUDE.md` | 노트북의 Claude Code가 읽을 개발 지침 |
 
 ## 프로토타입 보기
