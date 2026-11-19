@@ -104,13 +104,9 @@ CREATE TABLE settings (id TEXT PRIMARY KEY, json TEXT NOT NULL);
 ```
 JSON 필드명(camelCase)은 DB에서 snake_case로 바꾼다. 영양소 기준표(`standards`)는 구조가 깊어서 앱 안에 상수로 두거나 JSON 그대로 저장해도 된다.
 
-## 프로토타입과의 차이
-`prototype/index.html`은 예전 문서형 구조(`days/날짜` 문서 안에 items 배열, `pantry/{id}`)를 쓴다. 앱은 위 테이블 구조로 만든다.
-| 프로토타입 | 테이블 구조 |
-|---|---|
-| `days/{date}.items[]` | `entries` (id = 날짜-순번) |
-| `days/{date}.active` | `activity` |
-| `days/{date}.weight` | `body_logs` |
-| `pantry/{id}` (cat, unit, sat, src) | `foods` (category, serving, satFat, source) |
-| `settings/goal` (act, start, startW …) | `settings` (activityLevel, startDate, startWeight …) |
-| 끼니 `아침`…, 출처 `성분표`/`추정` | 코드값 `breakfast`…, `label`/`estimate` |
+## 프로토타입·기록장과의 관계
+`prototype/index.html`과 실제 사용 중인 기록장도 **같은 테이블 구조**를 쓴다 (2026-11-19부터).
+- 기록장: 아티팩트 DB의 컬렉션 `entries` `activity` `body` `foods` `settings` (문서 하나 = 행 하나)
+- 프로토타입: 같은 구조를 브라우저 localStorage(`kcalbank-v2`)에 저장
+- git의 `data/logs/`는 기록장 DB에서 **body를 빼고** 옮긴 사본
+- 기록장 화면은 entries를 최근 120일만 실시간으로 받고, 더 옛날 날짜는 그 날로 이동할 때 불러온다

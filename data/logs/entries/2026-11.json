@@ -2616,7 +2616,7 @@
    "id": "2026-11-15-03",
    "date": "2026-11-15",
    "meal": "lunch",
-   "name": "채 썰 생강",
+   "name": "채 썬 생강",
    "amount": 28,
    "unit": "g",
    "foodId": null,
@@ -2628,7 +2628,7 @@
    "sugar": 0.5,
    "sodium": 4,
    "source": "estimate",
-   "label": "채 썰 생강 28g (추정)"
+   "label": "채 썬 생강 28g (추정)"
   },
   {
    "id": "2026-11-15-04",
