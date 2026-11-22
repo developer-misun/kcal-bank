@@ -3547,6 +3547,24 @@
       "source": "estimate",
       "sugar": 4,
       "unit": "ml"
+    },
+    {
+      "amount": 1,
+      "carbs": 0,
+      "date": "2026-11-21",
+      "fat": 11.5,
+      "fiber": 0,
+      "foodId": "calvo-olive-tuna",
+      "id": "2026-11-21-01",
+      "kcal": 155,
+      "label": "칼보 올리브오일 참치 1캔 65g (성분표)",
+      "meal": "breakfast",
+      "name": "칼보 올리브오일 참치",
+      "protein": 13,
+      "sodium": 250,
+      "source": "label",
+      "sugar": 0,
+      "unit": "캔"
     }
   ]
 }
