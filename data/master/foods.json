@@ -1089,6 +1089,44 @@
       "sugar": 0,
       "sodium": 250,
       "source": "label"
+    },
+    {
+      "id": "ruffles-original",
+      "name": "러플스 오리지널 감자칩",
+      "category": "snack_drink",
+      "serving": {
+        "label": "1봉",
+        "amount": 1,
+        "unit": "봉"
+      },
+      "kcal": 280,
+      "carbs": 27,
+      "protein": 3,
+      "fat": 18,
+      "satFat": 2.5,
+      "fiber": 2,
+      "sugar": 1,
+      "sodium": 270,
+      "source": "label"
+    },
+    {
+      "id": "crown-butter-waffle-isigny",
+      "name": "크라운 버터와플 with 이즈니 생메르 버터",
+      "category": "snack_drink",
+      "serving": {
+        "label": "1봉 약 26g",
+        "amount": 26,
+        "unit": "g"
+      },
+      "kcal": 120,
+      "carbs": 19.8,
+      "protein": 2.1,
+      "fat": 3.6,
+      "satFat": 2.3,
+      "fiber": 0,
+      "sugar": 8.6,
+      "sodium": 94,
+      "source": "label"
     }
   ]
 }
