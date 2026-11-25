@@ -1127,6 +1127,25 @@
       "sugar": 8.6,
       "sodium": 94,
       "source": "label"
+    },
+    {
+      "id": "dryou-protein-bar-mini",
+      "name": "닥터유 프로 단백질바 미니 크런치",
+      "category": "snack_drink",
+      "serving": {
+        "label": "1개 10g",
+        "amount": 10,
+        "unit": "g"
+      },
+      "kcal": 51,
+      "carbs": 4.3,
+      "protein": 3.4,
+      "fat": 2.6,
+      "satFat": null,
+      "fiber": 0.3,
+      "sugar": 1.5,
+      "sodium": 25,
+      "source": "estimate"
     }
   ]
 }
